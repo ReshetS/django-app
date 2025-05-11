@@ -19,7 +19,8 @@ VPC, RDS, EC2-інстанси, Security-групи ми вже створюва
 
 ## Самостійне відтворення чи повторення
 
-> [!NOTE] > [terraform](https://www.terraform.io/) не входить в рамки курсу Foundations of Cloud Computing!
+> [!NOTE]
+> [terraform](https://www.terraform.io/) не входить в рамки курсу Foundations of Cloud Computing!  
 > Ментор не зобовʼязаний допомагати із проблемами, повʼязаними з його неналежним використанням!
 
 ### Створення підготовленої інфраструктури
@@ -33,8 +34,8 @@ terraform apply
 ```
 
 > [!WARNING]
-> Без додаткових налаштувань terraform буде використовувати дані з дефолтного профілю!
-> https://registry.terraform.io/providers/hashicorp/aws/latest/docs?product_intent=terraform#authentication-and-configuration
+> Без додаткових налаштувань terraform буде використовувати дані з дефолтного профілю!  
+> https://registry.terraform.io/providers/hashicorp/aws/latest/docs?product_intent=terraform#authentication-and-configuration  
 > Впевніться, що Ви використовуєте в дефолтному профілі саме свій аккаунт!
 
 ### Видалення підготовленої інфраструктури
