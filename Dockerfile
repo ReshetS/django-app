@@ -33,9 +33,6 @@ RUN useradd -m -r django && \
 COPY --from=builder /usr/local/lib/python3.13/site-packages/ /usr/local/lib/python3.13/site-packages/
 COPY --from=builder /usr/local/bin/ /usr/local/bin/
 
-# Create the app directory
-RUN mkdir /app
-
 # Set the working directory inside the container
 WORKDIR /app
 
