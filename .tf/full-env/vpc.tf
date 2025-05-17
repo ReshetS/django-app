@@ -64,13 +64,3 @@ resource "aws_route_table_association" "django_public" {
   subnet_id      = aws_subnet.django_public[count.index].id
   route_table_id = aws_route_table.django_public.id
 }
-
-resource "aws_security_group" "lb" {
-  name        = "django-load-balancer"
-  description = "Allow HTTP inbound traffic and all outbound traffic"
-  vpc_id      = aws_vpc.django.id
-
-  tags = {
-    Name = "django-load-balancer"
-  }
-}

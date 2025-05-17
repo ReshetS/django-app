@@ -33,11 +33,11 @@ resource "aws_security_group" "app" {
 }
 
 resource "aws_vpc_security_group_ingress_rule" "allow_http_app" {
-  security_group_id = aws_security_group.app.id
+  security_group_id            = aws_security_group.app.id
   referenced_security_group_id = aws_security_group.lb.id
-  from_port         = 8000
-  ip_protocol       = "tcp"
-  to_port           = 8000
+  from_port                    = 8000
+  ip_protocol                  = "tcp"
+  to_port                      = 8000
 }
 
 resource "aws_vpc_security_group_ingress_rule" "allow_ssh" {
@@ -65,9 +65,9 @@ resource "aws_security_group" "rds" {
 }
 
 resource "aws_vpc_security_group_ingress_rule" "allow_rds" {
-  security_group_id = aws_security_group.rds.id
+  security_group_id            = aws_security_group.rds.id
   referenced_security_group_id = aws_security_group.app.id
-  from_port         = 5432
-  ip_protocol       = "tcp"
-  to_port           = 5432
+  from_port                    = 5432
+  ip_protocol                  = "tcp"
+  to_port                      = 5432
 }
